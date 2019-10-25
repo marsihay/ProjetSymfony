@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+#Mbola tsy mety
 /**
  * @Route("/ligne/commande")
  */
@@ -20,6 +21,7 @@ class LigneCommandeController extends AbstractController
      */
     public function index(LigneCommandeRepository $ligneCommandeRepository): Response
     {
+        
         return $this->render('ligne_commande/index.html.twig', [
             'ligne_commandes' => $ligneCommandeRepository->findAll(),
         ]);
